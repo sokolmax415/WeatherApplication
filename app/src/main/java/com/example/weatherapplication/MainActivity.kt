@@ -45,17 +45,21 @@ class MainActivity : AppCompatActivity() {
         val spinnerPeriod = findViewById<Spinner>(R.id.spinnerPeriod)
         val btnOpen       = findViewById<Button>(R.id.btnOpenForecast)
 
-        spinnerCity.adapter = ArrayAdapter(
+        val cityAdapter = ArrayAdapter(
             this,
-            android.R.layout.simple_spinner_dropdown_item,
+            R.layout.spinner_item,
             cityNames
         )
+        cityAdapter.setDropDownViewResource(R.layout.spinner_item)
+        spinnerCity.adapter = cityAdapter
 
-        spinnerPeriod.adapter = ArrayAdapter(
+        val periodAdapter = ArrayAdapter(
             this,
-            android.R.layout.simple_spinner_dropdown_item,
+            R.layout.spinner_item,
             periodNames
         )
+        periodAdapter.setDropDownViewResource(R.layout.spinner_item)
+        spinnerPeriod.adapter = periodAdapter
 
         btnOpen.setOnClickListener {
             val citySlug = cityCodes[spinnerCity.selectedItemPosition]

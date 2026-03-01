@@ -11,15 +11,14 @@
         android:layout_height="match_parent"
         android:background="@color/background"
         android:orientation="vertical"
-        android:padding="50dp"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="39dp">
+        android:padding="50dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:text="@string/city_choose"
+            android:textStyle="bold"
             android:textColor="@color/text_main"
             android:textSize="20sp" />
 
@@ -36,6 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:text="@string/prediction_period"
+            android:textStyle="bold"
             android:textColor="@color/text_main"
             android:textSize="20sp" />
 
@@ -53,6 +53,7 @@
             android:layout_height="wrap_content"
             android:text="@string/prediction_opening"
             android:backgroundTint="@color/button"
+            android:textColor="@color/white"
             android:textSize="20sp" />
 
     </LinearLayout>
